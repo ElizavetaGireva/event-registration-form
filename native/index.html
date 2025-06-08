@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма авторизации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Шапка страницы -->
+<header>
+    <h1>Система авторизации</h1>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Авторизация</h2>
+            <p>Войдите, чтобы продолжить</p>
+        </div>
+
+        <!-- Сообщения об ошибках/успехе -->
+        <div id="message" class="message"></div>
+
+        <!-- Кнопки социальных сетей -->
+        <div class="social-login">
+            <button class="social-btn google" aria-label="Войти через Google">
+                <i>G</i>
+            </button>
+            <button class="social-btn facebook" aria-label="Войти через Facebook">
+                <i>F</i>
+            </button>
+            <button class="social-btn twitter" aria-label="Войти через Twitter">
+                <i>T</i>
+            </button>
+        </div>
+
+        <!-- Разделитель -->
+        <div class="divider">
+            <span>или</span>
+        </div>
+
+        <!-- Форма входа -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Логин</label>
+                <input type="text"
+                       id="username"
+                       class="input-field"
+                       placeholder="Введите логин"
+                       aria-label="Логин"
+                       aria-required="true"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password"
+                       id="password"
+                       class="input-field"
+                       placeholder="Введите пароль"
+                       aria-label="Пароль"
+                       aria-required="true"
+                       required>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember" aria-checked="false" aria-label="Сохранить сессию">
+                <label for="remember">Сохранять сессию</label>
+            </div>
+
+            <button type="submit" class="login-btn" id="submitBtn" aria-label="Войти в систему">
+                Войти
+            </button>
+        </form>
+
+        <div class="signup-link">
+            Ещё нет аккаунта? <a href="#" id="signupLink" aria-label="Зарегистрироваться">Зарегистрироваться</a>
+        </div>
+    </div>
+</main>
+
+<!-- Подвал страницы -->
+<footer>
+    <p>&copy; Система авторизации by Гирева Елизавета</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
