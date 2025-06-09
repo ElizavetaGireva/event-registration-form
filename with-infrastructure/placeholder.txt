@@ -1,1 +1,0 @@
-This folder will contain implementation with build infrastructure
