@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
     root: 'src',
     server: {
-        port: 7777, // 0 = автоматический выбор свободного порта
+        port: 7777,
         open: true,
         strictPort: true
     }
