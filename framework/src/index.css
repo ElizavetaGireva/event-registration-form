@@ -6,13 +6,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   color: #fff;
 }
 
@@ -21,6 +22,13 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Основной контейнер приложения */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Шапка страницы */
@@ -38,7 +46,7 @@ header h1 {
 
 /* Основное содержимое */
 main {
-  flex: 1;
+  flex: 1 0 auto; /* Важно! */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +68,48 @@ main {
 
 /* Подвал */
 footer {
+  flex-shrink: 0; /* Важно! */
   background: rgba(0, 0, 0, 0.7);
   padding: 1.2rem;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
+}
+
+/* Анимация лепестков */
+.petal {
+  position: absolute;
+  top: -50px;
+  font-size: 1.5rem;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+  animation: fall linear infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh) rotate(360deg);
+  }
+}
+
+/* Анимация лепестков */
+.petal {
+  position: absolute;
+  top: -50px;
+  font-size: 1.5rem;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+  animation: fall linear infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh) rotate(360deg);
+  }
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from './components/Header';
+import LoginForm from './components/LoginForm';
 import Footer from './components/Footer';
+import PetalsAnimation from './components/PetalsAnimation';
 
 const App: React.FC = () => {
     return (
         <div className="app">
+            <PetalsAnimation />
             <Header />
             <main>
-                <div className="login-container">
-                    <h2>Компонент формы в разработке</h2>
-                    <p>Скоро здесь будет форма авторизации</p>
-                </div>
+                <LoginForm />
             </main>
             <Footer />
         </div>
