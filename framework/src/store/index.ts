@@ -3,9 +3,9 @@ import authReducer from './authSlice'; // Импортируем редьюсе�
 
 // Создаем хранилище
 export const store = configureStore({
-    reducer: {
-        auth: authReducer,
-    }
+  reducer: {
+    auth: authReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -1,20 +1,9 @@
 import React from 'react';
-import Header from './components/Header';
-import LoginForm from './components/LoginForm';
-import Footer from './components/Footer';
-import PetalsAnimation from './components/PetalsAnimation';
+import LoginPage from './pages/LoginPage';
+import './style.css'; // Импортируем ваш CSS
 
 const App: React.FC = () => {
-    return (
-        <div className="app">
-            <PetalsAnimation />
-            <Header />
-            <main>
-                <LoginForm />
-            </main>
-            <Footer />
-        </div>
-    );
+  return <LoginPage />;
 };
 
 export default App;
